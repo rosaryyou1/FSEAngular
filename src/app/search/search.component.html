@@ -1,0 +1,83 @@
+<!--<div class="demo-button-container">
+    <button mat-raised-button (click)="addData()" class="demo-button">
+      Add data
+    </button>
+    <button
+        mat-raised-button
+        [disabled]="!dataSource.length"
+        (click)="removeData()"
+        class="demo-button">
+      Remove data
+    </button>
+  </div>-->
+  <div class="search">
+      <form class="example-form"  [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <table id="Search">
+        <tr>
+            <td>Name</td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="searchName">
+            </mat-form-field></td>
+            <td>Associate Id</td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Associate Id</mat-label>
+              <input matInput formControlName="searchAssociateId">
+            </mat-form-field></td>
+            <td>Skills</td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select formControlName="searchSkillName">
+                  <mat-option *ngFor="let skill of allSkills" [value]="skill" >{{skill}}</mat-option>
+                </mat-select>
+              <input matInput>
+            </mat-form-field></td>
+            <td> <button class="button" type="submit">Submit</button></td>
+        </tr>
+    </table>
+    </form>
+  </div>
+
+  <!-- <div class="content" role="main"  *ngFor="let user of users"> -->
+
+  <div class="container"  *ngFor="let user of users">
+    <div class="left">
+      <table id="profile" >
+          <tr>
+              <td class="odd">Name </td>
+              <td class="even">{{user.name}}</td>
+          </tr>
+          <tr>
+            <td class="odd">ID</td>
+            <td class="even">{{user.assoicateId}}</td>
+          </tr>
+          <tr>
+            <td class="odd">Email</td>
+            <td class="even">{{user.email}}</td>
+          </tr>
+          <tr>
+            <td class="odd">Phone</td>
+            <td class="even">{{user.mobile}}</td>
+          </tr>
+      </table>
+    </div>
+    <div class="center" >
+        <table id="TechSkills">
+            <tr *ngFor="let tskills of user.technicalSkills">
+                <td class="odd" >{{tskills.name}} </td>
+                <td class="even">{{tskills.level}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="right" >
+        <table id="NonTechSkills">
+            <tr *ngFor="let nontskills of user.nonTechnicalSkills">
+                <td class="odd">{{nontskills.name}} </td>
+                <td  class="even">{{nontskills.level}}</td>
+            </tr>
+        </table>
+    </div>
+  </div>
+
+   
+  <!-- </div> -->
