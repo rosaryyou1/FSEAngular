@@ -5,49 +5,53 @@
           "assoicateId":"CTS23423",
           "email":"test@gmail.com",
          "mobile":"43234423423",
-         "technicalSkills":[ {
+         "skills":[ {
              "name":"Angular",
-             "level":8
+             "level":8,
+            "type": "Tech"
              },
              {
                 "name":"Java",
-                "level":12
-            }
-        ],
-         "nonTechnicalSkills":[
+                "level":12,
+                "type": "Tech"
+            },
             {
                 "name":"Communication",
-                "level":8
+                "level":8,
+                "type": "Non-Tech"
             },
                 {
                    "name":"Verbal",
-                   "level":12
+                   "level":12,
+                   "type": "Non-Tech"
                }
          ]   
         },
         {
             "name":"cyril",
-            "userId":1244,
+            "userId":11123,
              "assoicateId":"CTS23423",
              "email":"test@gmail.com",
             "mobile":"43234423423",
-            "technicalSkills":[ {
-                "name":"Angular1",
-                "level":8
+            "skills":[ {
+                "name":"Angular",
+                "level":8,
+               "type": "Tech"
                 },
                 {
-                   "name":"Java1",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
+                   "name":"Java",
+                   "level":12,
+                   "type": "Tech"
+               },
                {
                    "name":"Communication",
-                   "level":8
+                   "level":8,
+                   "type": "Non-Tech"
                },
                    {
                       "name":"Verbal",
-                      "level":12
+                      "level":12,
+                      "type": "Non-Tech"
                   }
             ]   
            },
@@ -57,23 +61,25 @@
              "assoicateId":"CTS23423",
              "email":"test@gmail.com",
             "mobile":"43234423423",
-            "technicalSkills":[ {
+            "skills":[ {
                 "name":"Angular",
-                "level":8
+                "level":8,
+               "type": "Tech"
                 },
                 {
                    "name":"Java",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
+                   "level":12,
+                   "type": "Tech"
+               },
                {
                    "name":"Communication",
-                   "level":8
+                   "level":8,
+                   "type": "Non-Tech"
                },
                    {
                       "name":"Verbal",
-                      "level":12
+                      "level":12,
+                      "type": "Non-Tech"
                   }
             ]   
            },
@@ -83,23 +89,25 @@
              "assoicateId":"CTS23423",
              "email":"test@gmail.com",
             "mobile":"43234423423",
-            "technicalSkills":[ {
+            "skills":[ {
                 "name":"Angular",
-                "level":8
+                "level":8,
+               "type": "Tech"
                 },
                 {
                    "name":"Java",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
+                   "level":12,
+                   "type": "Tech"
+               },
                {
                    "name":"Communication",
-                   "level":8
+                   "level":8,
+                   "type": "Non-Tech"
                },
                    {
                       "name":"Verbal",
-                      "level":12
+                      "level":12,
+                      "type": "Non-Tech"
                   }
             ]   
            },
@@ -109,259 +117,27 @@
              "assoicateId":"CTS23423",
              "email":"test@gmail.com",
             "mobile":"43234423423",
-            "technicalSkills":[ {
+            "skills":[ {
                 "name":"Angular",
-                "level":8
+                "level":8,
+               "type": "Tech"
                 },
                 {
                    "name":"Java",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
+                   "level":12,
+                   "type": "Tech"
+               },
                {
                    "name":"Communication",
-                   "level":8
+                   "level":8,
+                   "type": "Non-Tech"
                },
                    {
                       "name":"Verbal",
-                      "level":12
+                      "level":12,
+                      "type": "Non-Tech"
                   }
             ]   
-           },
-           {
-            "name":"cyril",
-            "userId":11123,
-             "assoicateId":"CTS23423",
-             "email":"test@gmail.com",
-            "mobile":"43234423423",
-            "technicalSkills":[ {
-                "name":"Angular",
-                "level":8
-                },
-                {
-                   "name":"Java",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
-               {
-                   "name":"Communication",
-                   "level":8
-               },
-                   {
-                      "name":"Verbal",
-                      "level":12
-                  }
-            ]   
-           },
-           {
-            "name":"cyril",
-            "userId":11123,
-             "assoicateId":"CTS23423",
-             "email":"test@gmail.com",
-            "mobile":"43234423423",
-            "technicalSkills":[ {
-                "name":"Angular",
-                "level":8
-                },
-                {
-                   "name":"Java",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
-               {
-                   "name":"Communication",
-                   "level":8
-               },
-                   {
-                      "name":"Verbal",
-                      "level":12
-                  }
-            ]   
-           },
-           {
-            "name":"cyril",
-            "userId":11123,
-             "assoicateId":"CTS23423",
-             "email":"test@gmail.com",
-            "mobile":"43234423423",
-            "technicalSkills":[ {
-                "name":"Angular",
-                "level":8
-                },
-                {
-                   "name":"Java",
-                   "level":12
-               }
-           ],
-            "nonTechnicalSkills":[
-               {
-                   "name":"Communication",
-                   "level":8
-               },
-                   {
-                      "name":"Verbal",
-                      "level":12
-                  }
-            ]   
-           },
-           {
-               "name":"cyril",
-               "userId":1244,
-                "assoicateId":"CTS23423",
-                "email":"test@gmail.com",
-               "mobile":"43234423423",
-               "technicalSkills":[ {
-                   "name":"Angular1",
-                   "level":8
-                   },
-                   {
-                      "name":"Java1",
-                      "level":12
-                  }
-              ],
-               "nonTechnicalSkills":[
-                  {
-                      "name":"Communication",
-                      "level":8
-                  },
-                      {
-                         "name":"Verbal",
-                         "level":12
-                     }
-               ]   
-              },
-              {
-               "name":"cyril",
-               "userId":11123,
-                "assoicateId":"CTS23423",
-                "email":"test@gmail.com",
-               "mobile":"43234423423",
-               "technicalSkills":[ {
-                   "name":"Angular",
-                   "level":8
-                   },
-                   {
-                      "name":"Java",
-                      "level":12
-                  }
-              ],
-               "nonTechnicalSkills":[
-                  {
-                      "name":"Communication",
-                      "level":8
-                  },
-                      {
-                         "name":"Verbal",
-                         "level":12
-                     }
-               ]   
-              },
-              {
-               "name":"cyril",
-               "userId":11123,
-                "assoicateId":"CTS23423",
-                "email":"test@gmail.com",
-               "mobile":"43234423423",
-               "technicalSkills":[ {
-                   "name":"Angular",
-                   "level":8
-                   },
-                   {
-                      "name":"Java",
-                      "level":12
-                  }
-              ],
-               "nonTechnicalSkills":[
-                  {
-                      "name":"Communication",
-                      "level":8
-                  },
-                      {
-                         "name":"Verbal",
-                         "level":12
-                     }
-               ]   
-              },
-              {
-               "name":"cyril",
-               "userId":11123,
-                "assoicateId":"CTS23423",
-                "email":"test@gmail.com",
-               "mobile":"43234423423",
-               "technicalSkills":[ {
-                   "name":"Angular",
-                   "level":8
-                   },
-                   {
-                      "name":"Java",
-                      "level":12
-                  }
-              ],
-               "nonTechnicalSkills":[
-                  {
-                      "name":"Communication",
-                      "level":8
-                  },
-                      {
-                         "name":"Verbal",
-                         "level":12
-                     }
-               ]   
-              },
-              {
-               "name":"cyril",
-               "userId":11123,
-                "assoicateId":"CTS23423",
-                "email":"test@gmail.com",
-               "mobile":"43234423423",
-               "technicalSkills":[ {
-                   "name":"Angular",
-                   "level":8
-                   },
-                   {
-                      "name":"Java",
-                      "level":12
-                  }
-              ],
-               "nonTechnicalSkills":[
-                  {
-                      "name":"Communication",
-                      "level":8
-                  },
-                      {
-                         "name":"Verbal",
-                         "level":12
-                     }
-               ]   
-              },
-              {
-               "name":"cyril",
-               "userId":11123,
-                "assoicateId":"CTS23423",
-                "email":"test@gmail.com",
-               "mobile":"43234423423",
-               "technicalSkills":[ {
-                   "name":"Angular",
-                   "level":8
-                   },
-                   {
-                      "name":"Java",
-                      "level":12
-                  }
-              ],
-               "nonTechnicalSkills":[
-                  {
-                      "name":"Communication",
-                      "level":8
-                  },
-                      {
-                         "name":"Verbal",
-                         "level":12
-                     }
-               ]   
-              }
+           }
     ]
 }

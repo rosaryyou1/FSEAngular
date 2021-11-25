@@ -45,35 +45,35 @@
       <table id="profile" >
           <tr>
               <td class="odd">Name </td>
-              <td class="even">{{user.name}}</td>
+              <td class="even">{{user.AssociateName}}</td>
           </tr>
           <tr>
             <td class="odd">ID</td>
-            <td class="even">{{user.assoicateId}}</td>
+            <td class="even">{{user.AssociateId}}</td>
           </tr>
           <tr>
             <td class="odd">Email</td>
-            <td class="even">{{user.email}}</td>
+            <td class="even">{{user.Email}}</td>
           </tr>
           <tr>
             <td class="odd">Phone</td>
-            <td class="even">{{user.mobile}}</td>
+            <td class="even">{{user.Mobile}}</td>
           </tr>
       </table>
     </div>
     <div class="center" >
         <table id="TechSkills">
-            <tr *ngFor="let tskills of user.technicalSkills">
-                <td class="odd" >{{tskills.name}} </td>
-                <td class="even">{{tskills.level}}</td>
+            <tr *ngFor="let tskills of user.TechnicalSkills">
+                <td class="odd" >{{tskills.Skill}} </td>
+                <td class="even">{{tskills.Level}}</td>
             </tr>
         </table>
     </div>
     <div class="right" >
         <table id="NonTechSkills">
-            <tr *ngFor="let nontskills of user.nonTechnicalSkills">
-                <td class="odd">{{nontskills.name}} </td>
-                <td  class="even">{{nontskills.level}}</td>
+            <tr *ngFor="let nontskills of user.NonTechnicalSkills">
+                <td class="odd">{{nontskills.Skill}} </td>
+                <td  class="even">{{nontskills.Level}}</td>
             </tr>
         </table>
     </div>

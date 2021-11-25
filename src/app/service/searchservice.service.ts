@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 export class SearchserviceService {
 
   url: string = environment.serviceurl;
+  profile:string=environment.profile;
 
   constructor(private http : HttpClient) { }
 
@@ -26,11 +27,26 @@ export class SearchserviceService {
 
 searchUsersByCriteria(searchCriteria:Criteria): Observable<User[]> {
   console.log(searchCriteria.searchName);
-  return this.http.get<User[]>(this.url+"/searchName/"+searchCriteria.searchName)
+  if(searchCriteria.searchName.length>0){
+    var endpoint = this.url+"/searchName/"+searchCriteria.searchAssociateId+'-'+searchCriteria.searchName;
+    console.log(endpoint);
+    if(this.profile=='local'){
+      endpoint = "http://localhost:3000/Users"
+    }
+  return this.http.get<User[]>(endpoint)
     .pipe(map((data:User[])=>{
       return data;
     }), catchError(error => {
       return throwError( 'Service error!' );
     }) )
+  }else{
+    return this.http.get<User[]>(this.url+"/searchSkill/"+searchCriteria.searchSkillName)
+    .pipe(map((data:User[])=>{
+      return data;
+    }), catchError(error => {
+      return throwError( 'Service error!' );
+    }) )
+    
+  }
   }
 }

@@ -1,9 +1,13 @@
-export class NonTechnicalSkills {
-     name: string;
-     level: number;
+import { skillsInterface } from "./skillsInterface.model";
+
+export class NonTechnicalSkills implements skillsInterface{
+    Skill: string;
+     Level: number;
+     Type:string;
     
-    constructor(name: string, level: number){
-        this.name = name;
-        this.level = level;
+    constructor(Skill: string, Level: number,Type:string){
+        this.Skill = Skill;
+        this.Level = Level;
+        this.Type = Type;
     }
 }

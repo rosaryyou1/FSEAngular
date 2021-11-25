@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  serviceurl:'http://localhost:3000/Users'
+  //serviceurl:'http://localhost:3000/Users',
+  profile:'prod',
+  serviceurl:'http://localhost:8080/skill-tracker/api/v1/admin'
+  //serviceurl:'http://ec2-18-222-118-240.us-east-2.compute.amazonaws.com:8080/skill-tracker/api/v1/admin'
+  
 };
 
 /*
