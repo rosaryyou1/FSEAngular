@@ -11,7 +11,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Skills } from '../model/skills-class.model';
 import { TechnicalSkills } from '../model/technical-skills.model';
 import { SkillFactoryClass } from '../model/skill-factory-class.model';
- 
+import 'lodash';
+declare var _:any;
 //const ELEMENT_DATA: User[] = [];
 const SKILLS = [
   'Java', 'Angular', 'Spring', 'Hibernate', 'Oracle'  
@@ -24,11 +25,13 @@ const SKILLS = [
 })
 
 export class SearchComponent implements OnInit {
-
+  public pageUsers:User[] = [];
   public users:User[] = [];
   public allSkills:Array<string>=[];
   public myForm:FormGroup;
-  
+  public isMore = false;
+  public noDataMsg = "";
+  public pageNo = 1;
   //@ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(public serivce: SearchserviceService) { 
@@ -64,19 +67,39 @@ export class SearchComponent implements OnInit {
     for(var i=0;i<users.length;i=i+1){
       users[i].TechnicalSkills = SkillFactoryClass.constructTechSkill(users[i].Skills,'Tech');
       users[i].NonTechnicalSkills = SkillFactoryClass.constructNonTechSkill(users[i].Skills,'Non-Tech');
+      users[i].TechnicalSkills = _.sortBy(users[i].TechnicalSkills,['Level']);
+      users[i].NonTechnicalSkills = _.sortBy(users[i].NonTechnicalSkills,['Level']);
     }
  }
   onSubmit(){
-    this.serivce.searchUsersByCriteria(this.myForm.value).subscribe
+    this.serivce.searchUsersByCriteria(this.myForm.value,this.pageNo).subscribe
     (
       (response:User[])=>{
-        this.users = response;
+         this.pageUsers= response;
+         this.users = this.users.concat(this.pageUsers);
         console.log(this.users)
+        if(this.pageUsers.length>0){
+          this.isMore = true;
+        }else{
+          this.isMore = false;
+        }
+        if(this.users.length==0){
+          this.noDataMsg = "Error or No Data";
+        }
         SearchComponent.constructSkills(this.users);
         console.log(this.users)
       },
-      (error) =>console.log(error)
+      (error) => {
+        this.isMore = false;
+        this.noDataMsg = "Error or No Data";
+        console.log(error);
+      }
     );
+  }
+
+  onMore(){
+    this.pageNo = this.pageNo+1;
+    this.onSubmit();
   }
 
 }

@@ -25,10 +25,10 @@ export class SearchserviceService {
     }) )
 }
 
-searchUsersByCriteria(searchCriteria:Criteria): Observable<User[]> {
+searchUsersByCriteria(searchCriteria:Criteria,pageNo:number): Observable<User[]> {
   console.log(searchCriteria.searchName);
   if(searchCriteria.searchName.length>0){
-    var endpoint = this.url+"/searchName/"+searchCriteria.searchAssociateId+'-'+searchCriteria.searchName;
+    var endpoint = this.url+"/searchName/"+searchCriteria.searchAssociateId+'-'+searchCriteria.searchName+"/"+pageNo;
     console.log(endpoint);
     if(this.profile=='local'){
       endpoint = "http://localhost:3000/Users"
@@ -40,7 +40,7 @@ searchUsersByCriteria(searchCriteria:Criteria): Observable<User[]> {
       return throwError( 'Service error!' );
     }) )
   }else{
-    return this.http.get<User[]>(this.url+"/searchSkill/"+searchCriteria.searchSkillName)
+    return this.http.get<User[]>(this.url+"/searchSkill/"+searchCriteria.searchSkillName+"/"+pageNo)
     .pipe(map((data:User[])=>{
       return data;
     }), catchError(error => {

@@ -32,14 +32,16 @@
                 </mat-select>
               <input matInput>
             </mat-form-field></td>
-            <td> <button class="button" type="submit">Submit</button></td>
+            <td> <button class="button" name="s1" type="submit">Submit</button></td>
         </tr>
     </table>
     </form>
   </div>
 
   <!-- <div class="content" role="main"  *ngFor="let user of users"> -->
-
+    <div class="container" *ngIf="users.length == 0">
+      <label>{{noDataMsg}}</label>
+    </div>
   <div class="container"  *ngFor="let user of users">
     <div class="left">
       <table id="profile" >
@@ -78,6 +80,8 @@
         </table>
     </div>
   </div>
-
+<div class="center">
+  <button mat-button *ngIf="isMore" class="button" name="s2" (click)="onMore()">Load More</button>
+</div>
    
   <!-- </div> -->
